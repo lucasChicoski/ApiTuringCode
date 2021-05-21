@@ -3,6 +3,8 @@ const { Router } = require('express');
 const login = Router();
 const connection = require('../conexao');
 
+
+//Rota de autenticação
 login.post('/login', async (req, res) => {
 
     var dadosUser = req.body
@@ -28,6 +30,7 @@ login.post('/login', async (req, res) => {
         if (email == sqlResultToJson[0].email && senha == sqlResultToJson[0].senha) {
             console.log('email e senha valido');
             res.send('Login efetuado!');
+            
 
         } else {
             res.send('senha ou email incorreto');
