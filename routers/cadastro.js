@@ -6,7 +6,7 @@ const connection = require('../conexao');
 
 
 cadastro.post('/cadastro', (req, res) => {
-
+    console.log('ok')
     var dadosUser = req.body;
 
     var nome = dadosUser.nome;
@@ -30,7 +30,8 @@ cadastro.post('/cadastro', (req, res) => {
             if (error) {
                 console.log(error)
             } else {
-                res.send("cadastrado com sucesso");
+                console.log('ok')
+                res.send("1");
             }
         })
 

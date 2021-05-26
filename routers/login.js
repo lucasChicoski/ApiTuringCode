@@ -29,12 +29,12 @@ login.post('/login', async (req, res) => {
 
         if (email == sqlResultToJson[0].email && senha == sqlResultToJson[0].senha) {
             console.log('email e senha valido');
-            res.send('Login efetuado!');
+            res.send('1');
             
 
         } else {
-            res.send('senha ou email incorreto');
-            console.log('email ou senha incorreto');
+            res.send('2');
+            console.log('senha ou email incorreto');
         }
         
     })
